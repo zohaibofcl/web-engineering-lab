@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +7,97 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="greeting"></h1>
+    <a href="#main-content" class="skip-link">skip to main content</a>
+    
+    <header>
+      <h1 id="greeting">Welcome to Zohaib Page</h1>
+      <nav>
+        <ul>
+          <li><a href="#schedule" aria-current="location">office hours</a></li>
+          <li><a href="#feedback">send feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main id="main-content">
+      <section id="schedule">
+        <h2>Office Hours</h2>
+        
+        <figure>
+          <svg role="img" aria-labelledby="pin-title" width="24" height="24" viewBox="0 0 24 24">
+            <title id="pin-title">Location pin</title>
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#000000"/>
+          </svg>
+          <figcaption>All office hours are held in Room 214.</figcaption>
+        </figure>
+       
+        <table>
+          <caption>Weekly Office Hours</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td><time datetime="09:00">9:00 AM</time> - <time datetime="11:00">11:00 AM</time></td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td><time datetime="10:00">10:00 AM</time> - <time datetime="12:00">12:00 PM</time></td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td><time datetime="09:00">9:00 AM</time> - <time datetime="11:00">11:00 AM</time></td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td><time datetime="10:00">10:00 AM</time> - <time datetime="12:00">12:00 PM</time></td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td><time datetime="09:00">9:00 AM</time> - <time datetime="11:00">11:00 AM</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      
+      
+      <section id="feedback">
+        <h2>Send Feedback</h2>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          
+          <!-- Updated Email Input -->
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required aria-describedby="email-hint">
+          <span id="email-hint">We will only use this to reply to you.</span>
+          
+          <fieldset>
+            <legend>Topic</legend>
+            <input type="radio" id="topic-lab" name="topic" value="lab">
+            <label for="topic-lab">Lab content</label>
+            <input type="radio" id="topic-other" name="topic" value="other">
+            <label for="topic-other">Something else</label>
+          </fieldset>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    
+    <footer>
+      <address>
+        content: <a href="mailto:zohaibofcl@gmail.com">zohaibofcl@gmail.com</a>
+      </address>
+    </footer>
 
     <script src="script.js"></script>
   </body>

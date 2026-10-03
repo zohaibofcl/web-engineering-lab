@@ -1,0 +1,51 @@
+/* Task 8: Visible focus indicators for interactive elements */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #0b5fff;
+  outline-offset: 2px;
+}
+
+/* Task 8: Visually hide the skip link until it receives keyboard focus */
+.skip-link {
+  position: absolute;
+  top: -100px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Fix from earlier: Align the location pin and text on the same line */
+figure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Fix from earlier: Stop the topic fieldset border from stretching across the whole screen */
+fieldset {
+  width: max-content;
+}
+/* Update your existing figure rule */
+figure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0; /* This removes the default browser indentation */
+  margin-bottom: 16px; /* Adds a little breathing room before the table */
+}
+
+/* Add this to make the table look neater and properly aligned */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 4px 16px 4px 0; /* Adds space between the columns */
+}
+caption {
+  font-weight: bold;
+  font-size: 1.2em; /* Makes the text 20% larger than the default */
+  text-align: left; /* Aligns it neatly with the rest of your table */
+  margin-bottom: 8px; /* Adds a little space between the caption and the table headers */
+}
